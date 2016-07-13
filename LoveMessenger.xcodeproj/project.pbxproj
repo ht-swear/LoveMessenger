@@ -11,7 +11,7 @@
 		2D0FF5571D33D1D700D824E3 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FF5561D33D1D700D824E3 /* CameraViewController.swift */; };
 		2D0FF5591D33DB8C00D824E3 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FF5581D33DB8C00D824E3 /* ShakeViewController.swift */; };
 		2D0FF55B1D33DFCE00D824E3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0FF55A1D33DFCE00D824E3 /* CoreMotion.framework */; };
-		2D0FF55D1D33F28200D824E3 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FF55C1D33F28200D824E3 /* LightViewController.swift */; };
+		2D0FF55D1D33F28200D824E3 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FF55C1D33F28200D824E3 /* CallViewController.swift */; };
 		2D0FF55F1D34032D00D824E3 /* FInalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FF55E1D34032D00D824E3 /* FInalViewController.swift */; };
 		2D92E3F31D2E2A9600E31C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92E3F21D2E2A9600E31C86 /* AppDelegate.swift */; };
 		2D92E3F51D2E2A9600E31C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92E3F41D2E2A9600E31C86 /* ViewController.swift */; };
@@ -19,6 +19,9 @@
 		2D92E3FA1D2E2A9600E31C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D92E3F91D2E2A9600E31C86 /* Assets.xcassets */; };
 		2D92E3FD1D2E2A9600E31C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D92E3FB1D2E2A9600E31C86 /* LaunchScreen.storyboard */; };
 		2D92E4051D2E33B200E31C86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92E4041D2E33B200E31C86 /* HomeViewController.swift */; };
+		AC4ED38A1D36AEDD002AD378 /* ngo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4ED3891D36AEDD002AD378 /* ngo.jpg */; };
+		AC4ED38C1D36BB04002AD378 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4ED38B1D36BB04002AD378 /* camera.jpg */; };
+		AC4ED38E1D36BB88002AD378 /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ED38D1D36BB88002AD378 /* CameraUtil.swift */; };
 		D2BB577C72A600D1D2687B15 /* Pods_LoveMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1C2B42DE98E2A48D617A6 /* Pods_LoveMessenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +32,7 @@
 		2D0FF5561D33D1D700D824E3 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2D0FF5581D33DB8C00D824E3 /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		2D0FF55A1D33DFCE00D824E3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		2D0FF55C1D33F28200D824E3 /* LightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
+		2D0FF55C1D33F28200D824E3 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		2D0FF55E1D34032D00D824E3 /* FInalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInalViewController.swift; sourceTree = "<group>"; };
 		2D92E3EF1D2E2A9600E31C86 /* LoveMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92E3F21D2E2A9600E31C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +42,9 @@
 		2D92E3FC1D2E2A9600E31C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D92E3FE1D2E2A9600E31C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D92E4041D2E33B200E31C86 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AC4ED3891D36AEDD002AD378 /* ngo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ngo.jpg; sourceTree = SOURCE_ROOT; };
+		AC4ED38B1D36BB04002AD378 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = camera.jpg; path = ../../camera.jpg; sourceTree = "<group>"; };
+		AC4ED38D1D36BB88002AD378 /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUtil.swift; path = "../../mimamori-ios/Mimamori/CameraUtil.swift"; sourceTree = "<group>"; };
 		EEE1C2B42DE98E2A48D617A6 /* Pods_LoveMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,13 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				2D92E3F21D2E2A9600E31C86 /* AppDelegate.swift */,
-				2D92E3F41D2E2A9600E31C86 /* ViewController.swift */,
-				2D0FF5541D33C32800D824E3 /* MessageViewController.swift */,
-				2D0FF5561D33D1D700D824E3 /* CameraViewController.swift */,
-				2D0FF55C1D33F28200D824E3 /* LightViewController.swift */,
-				2D0FF5581D33DB8C00D824E3 /* ShakeViewController.swift */,
-				2D0FF55E1D34032D00D824E3 /* FInalViewController.swift */,
-				2D92E4041D2E33B200E31C86 /* HomeViewController.swift */,
+				AC4ED38D1D36BB88002AD378 /* CameraUtil.swift */,
+				AC4ED3821D36ACF0002AD378 /* Image */,
+				AC3B3D221D355A9800D28DE8 /* ViewController */,
 				2D92E3F61D2E2A9600E31C86 /* Main.storyboard */,
 				2D92E3F91D2E2A9600E31C86 /* Assets.xcassets */,
 				2D92E3FB1D2E2A9600E31C86 /* LaunchScreen.storyboard */,
@@ -99,6 +101,29 @@
 				25B5589B763957330F9E2EB1 /* Pods-LoveMessenger.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC3B3D221D355A9800D28DE8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D92E3F41D2E2A9600E31C86 /* ViewController.swift */,
+				2D0FF5541D33C32800D824E3 /* MessageViewController.swift */,
+				2D0FF5561D33D1D700D824E3 /* CameraViewController.swift */,
+				2D0FF55C1D33F28200D824E3 /* CallViewController.swift */,
+				2D0FF5581D33DB8C00D824E3 /* ShakeViewController.swift */,
+				2D0FF55E1D34032D00D824E3 /* FInalViewController.swift */,
+				2D92E4041D2E33B200E31C86 /* HomeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AC4ED3821D36ACF0002AD378 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				AC4ED3891D36AEDD002AD378 /* ngo.jpg */,
+				AC4ED38B1D36BB04002AD378 /* camera.jpg */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		D12A03EC586F5B30736E50B7 /* Frameworks */ = {
@@ -123,6 +148,7 @@
 				2D92E3ED1D2E2A9600E31C86 /* Resources */,
 				2FF8150EA57D862159299719 /* 📦 Embed Pods Frameworks */,
 				928F8195CDD5B531A9B0D40B /* 📦 Copy Pods Resources */,
+				358B83E70EAA8E9334B03B84 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,9 +197,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4ED38A1D36AEDD002AD378 /* ngo.jpg in Resources */,
 				2D92E3FD1D2E2A9600E31C86 /* LaunchScreen.storyboard in Resources */,
 				2D92E3FA1D2E2A9600E31C86 /* Assets.xcassets in Resources */,
 				2D92E3F81D2E2A9600E31C86 /* Main.storyboard in Resources */,
+				AC4ED38C1D36BB04002AD378 /* camera.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +216,21 @@
 			inputPaths = (
 			);
 			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveMessenger/Pods-LoveMessenger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		358B83E70EAA8E9334B03B84 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4ED38E1D36BB88002AD378 /* CameraUtil.swift in Sources */,
 				2D92E3F51D2E2A9600E31C86 /* ViewController.swift in Sources */,
 				2D0FF5591D33DB8C00D824E3 /* ShakeViewController.swift in Sources */,
 				2D0FF5571D33D1D700D824E3 /* CameraViewController.swift in Sources */,
@@ -239,7 +283,7 @@
 				2D0FF5551D33C32800D824E3 /* MessageViewController.swift in Sources */,
 				2D0FF55F1D34032D00D824E3 /* FInalViewController.swift in Sources */,
 				2D92E4051D2E33B200E31C86 /* HomeViewController.swift in Sources */,
-				2D0FF55D1D33F28200D824E3 /* LightViewController.swift in Sources */,
+				2D0FF55D1D33F28200D824E3 /* CallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

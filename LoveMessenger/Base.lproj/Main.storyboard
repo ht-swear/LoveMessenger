@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoveMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="LoveMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="W9L-nE-ke1" kind="show" id="Hkj-lJ-i4X"/>
+                                    <segue destination="Q4J-f0-4oW" kind="show" id="4Cs-7g-KNW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1f-2i-qh2">
@@ -101,26 +101,11 @@ favorite Messenger</string>
                                     <constraint firstAttribute="width" constant="213" id="KUi-u2-Q81"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Accel">
+                                <state key="normal" title="Shake">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o1E-3c-BEV" kind="show" id="mub-9B-qoU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tod-yv-cbL" customClass="ZFRippleButton" customModule="ZFRippleButton">
-                                <rect key="frame" x="81" y="528" width="213" height="58"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Vx6-iI-757"/>
-                                    <constraint firstAttribute="width" constant="213" id="bRS-kt-Iun"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Light">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mGn-Xj-ps0" kind="show" id="SWc-tM-xVR"/>
+                                    <segue destination="W9L-nE-ke1" kind="show" identifier="shake" id="b4s-4x-gSD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-kd-1fL" customClass="ZFRippleButton" customModule="ZFRippleButton">
@@ -135,7 +120,22 @@ favorite Messenger</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zht-cY-Fek" kind="show" id="zBt-jF-zcN"/>
+                                    <segue destination="W9L-nE-ke1" kind="show" identifier="camera" id="XQi-Vx-hjC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tod-yv-cbL" customClass="ZFRippleButton" customModule="ZFRippleButton">
+                                <rect key="frame" x="81" y="528" width="213" height="58"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Vx6-iI-757"/>
+                                    <constraint firstAttribute="width" constant="213" id="bRS-kt-Iun"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="W9L-nE-ke1" kind="show" identifier="call" id="xaV-Nt-KwK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -155,7 +155,7 @@ favorite Messenger</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZb-sU-gqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.5" y="400.5"/>
+            <point key="canvasLocation" x="759.5" y="394.5"/>
         </scene>
         <!--Shake View Controller-->
         <scene sceneID="ksk-OX-nBf">
@@ -222,45 +222,33 @@ iPhone</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-J6-Mlu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ4-eb-rBg">
-                                <rect key="frame" x="39" y="191" width="297" height="83"/>
+                                <rect key="frame" x="20" y="191" width="335" height="261"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="3e4-h8-0Kf"/>
-                                    <constraint firstAttribute="height" constant="83" id="ipH-zP-9ke"/>
+                                    <constraint firstAttribute="height" constant="261" id="Ny6-pj-HpV"/>
+                                    <constraint firstAttribute="width" constant="335" id="jZA-ZA-wg4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awm-Au-X9o" customClass="ZFRippleButton" customModule="ZFRippleButton">
-                                <rect key="frame" x="137" y="498" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3VG-L7-9gP"/>
-                                    <constraint firstAttribute="height" constant="100" id="Ih8-VY-bNj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="awm-Au-X9o" firstAttribute="centerX" secondItem="jZ4-eb-rBg" secondAttribute="centerX" id="EbU-8p-gl1"/>
-                            <constraint firstItem="zH5-ff-Ay0" firstAttribute="top" secondItem="awm-Au-X9o" secondAttribute="bottom" constant="69" id="H6N-L3-CGk"/>
-                            <constraint firstItem="jZ4-eb-rBg" firstAttribute="centerY" secondItem="fJN-v1-HPj" secondAttribute="centerY" constant="-101" id="PXw-zH-m4n"/>
-                            <constraint firstItem="jZ4-eb-rBg" firstAttribute="centerX" secondItem="fJN-v1-HPj" secondAttribute="centerX" id="Rg9-Da-FUD"/>
+                            <constraint firstItem="jZ4-eb-rBg" firstAttribute="centerX" secondItem="fJN-v1-HPj" secondAttribute="centerX" id="2oC-lZ-j7M"/>
+                            <constraint firstItem="8ru-J6-Mlu" firstAttribute="bottom" secondItem="zH5-ff-Ay0" secondAttribute="top" id="5cf-3y-PjY"/>
+                            <constraint firstItem="8ru-J6-Mlu" firstAttribute="centerX" secondItem="jZ4-eb-rBg" secondAttribute="centerX" id="9ms-Jk-NdG"/>
+                            <constraint firstItem="8ru-J6-Mlu" firstAttribute="leading" secondItem="fJN-v1-HPj" secondAttribute="leading" id="B0T-EI-8TU"/>
+                            <constraint firstItem="jZ4-eb-rBg" firstAttribute="top" secondItem="xfZ-d9-doG" secondAttribute="bottom" constant="171" id="USJ-gH-qHd"/>
+                            <constraint firstItem="8ru-J6-Mlu" firstAttribute="top" secondItem="fJN-v1-HPj" secondAttribute="top" id="guN-9f-ZtA"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="imageView" destination="8ru-J6-Mlu" id="A61-Ac-nP0"/>
                         <outlet property="messageLabel" destination="jZ4-eb-rBg" id="Vfc-bR-xLg"/>
                     </connections>
                 </viewController>
@@ -268,10 +256,10 @@ iPhone</string>
             </objects>
             <point key="canvasLocation" x="2402.5" y="394.5"/>
         </scene>
-        <!--Light View Controller-->
+        <!--Call View Controller-->
         <scene sceneID="Gq2-gD-Pt4">
             <objects>
-                <viewController id="mGn-Xj-ps0" customClass="LightViewController" customModule="LoveMessenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mGn-Xj-ps0" customClass="CallViewController" customModule="LoveMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bYF-aQ-tp5"/>
                         <viewControllerLayoutGuide type="bottom" id="80b-vg-pDI"/>
@@ -280,41 +268,41 @@ iPhone</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l29-cm-GSu">
-                                <rect key="frame" x="39" y="120" width="297" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-yy-dLg">
+                                <rect key="frame" x="254" y="509" width="86" height="89"/>
+                                <color key="backgroundColor" red="0.54855936367035851" green="1" blue="0.54507282448024674" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="6AM-Xq-s11"/>
-                                    <constraint firstAttribute="width" constant="297" id="h2H-mg-wf7"/>
+                                    <constraint firstAttribute="height" constant="89" id="0Y4-ck-EAc"/>
+                                    <constraint firstAttribute="width" constant="86" id="R6C-H3-ZXP"/>
                                 </constraints>
-                                <string key="text">Please lose
-light iPhone</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="after 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3A-PF-Wl7">
-                                <rect key="frame" x="88" y="371" width="198" height="118"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="198" id="VRF-WN-cEP"/>
-                                    <constraint firstAttribute="height" constant="118" id="tx6-Gq-Omh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushCall:" destination="mGn-Xj-ps0" eventType="touchUpInside" id="dvk-z8-wZP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="um6-6H-2su">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S3A-PF-Wl7" firstAttribute="top" secondItem="B6v-1l-P1c" secondAttribute="topMargin" constant="371" id="LpN-Z2-z1F"/>
-                            <constraint firstItem="l29-cm-GSu" firstAttribute="centerX" secondItem="B6v-1l-P1c" secondAttribute="centerX" id="W1S-9s-Dxb"/>
-                            <constraint firstItem="l29-cm-GSu" firstAttribute="top" secondItem="bYF-aQ-tp5" secondAttribute="bottom" constant="100" id="ju2-gF-WTR"/>
-                            <constraint firstItem="S3A-PF-Wl7" firstAttribute="centerX" secondItem="B6v-1l-P1c" secondAttribute="centerX" id="uzM-YZ-6Bk"/>
+                            <constraint firstAttribute="trailing" secondItem="um6-6H-2su" secondAttribute="trailing" id="9M1-r4-Y0X"/>
+                            <constraint firstItem="um6-6H-2su" firstAttribute="leading" secondItem="B6v-1l-P1c" secondAttribute="leading" id="JEj-CV-Wet"/>
+                            <constraint firstItem="80b-vg-pDI" firstAttribute="top" secondItem="2uz-yy-dLg" secondAttribute="bottom" constant="69" id="LzF-mT-llQ"/>
+                            <constraint firstItem="um6-6H-2su" firstAttribute="top" secondItem="B6v-1l-P1c" secondAttribute="top" id="UBW-J1-ag0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2uz-yy-dLg" secondAttribute="trailing" constant="19" id="bTV-H0-GwS"/>
+                            <constraint firstItem="um6-6H-2su" firstAttribute="bottom" secondItem="80b-vg-pDI" secondAttribute="top" id="gOn-GI-Hdj"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="lightLabel" destination="S3A-PF-Wl7" id="Le2-j0-LUs"/>
-                        <segue destination="bZa-lE-QUe" kind="show" identifier="LightFin" id="Ca2-WI-P1b"/>
+                        <outlet property="callButton" destination="2uz-yy-dLg" id="IWQ-AI-2TA"/>
+                        <outlet property="imageView" destination="um6-6H-2su" id="ZnY-Bu-Pig"/>
+                        <segue destination="bZa-lE-QUe" kind="show" identifier="callFin" id="Ca2-WI-P1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNv-V7-rFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,53 +321,37 @@ light iPhone</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7C-xI-TUG" customClass="ZFRippleButton" customModule="ZFRippleButton">
-                                <rect key="frame" x="137" y="501" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="L36-9t-IfF"/>
-                                    <constraint firstAttribute="height" constant="100" id="dsI-3w-LvG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRz-yE-KNL">
-                                <rect key="frame" x="34" y="416" width="307" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8jG-c9-FtR">
-                                <rect key="frame" x="16" y="28" width="343" height="360"/>
+                                <rect key="frame" x="16" y="28" width="343" height="567"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="567" id="HNi-Q2-GBz"/>
+                                    <constraint firstAttribute="width" constant="343" id="JgX-YS-TbQ"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-KZ-9mF">
+                                <rect key="frame" x="157" y="603" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hn1-fb-Cwr"/>
+                                    <constraint firstAttribute="width" constant="60" id="reN-uV-nd1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera.jpg"/>
+                                <connections>
+                                    <action selector="camra:" destination="zht-cY-Fek" eventType="touchUpInside" id="gqh-j4-d7P"/>
+                                    <segue destination="bZa-lE-QUe" kind="show" identifier="CameraFin" id="MfV-ly-YqV"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="v7C-xI-TUG" firstAttribute="top" secondItem="8jG-c9-FtR" secondAttribute="bottom" constant="113" id="1Mj-yu-0f1"/>
-                            <constraint firstItem="v7C-xI-TUG" firstAttribute="centerX" secondItem="8jG-c9-FtR" secondAttribute="centerX" id="QbZ-Qm-WX1"/>
-                            <constraint firstItem="8jG-c9-FtR" firstAttribute="top" secondItem="fvR-bD-hNv" secondAttribute="bottom" constant="8" symbolic="YES" id="Rz1-4F-AC8"/>
-                            <constraint firstItem="8jG-c9-FtR" firstAttribute="centerX" secondItem="ZRz-yE-KNL" secondAttribute="centerX" id="Tsb-6g-vln"/>
-                            <constraint firstItem="ZRz-yE-KNL" firstAttribute="leading" secondItem="rvh-5k-oMk" secondAttribute="leadingMargin" constant="18" id="Ueb-Oh-OgX"/>
-                            <constraint firstItem="v7C-xI-TUG" firstAttribute="centerX" secondItem="rvh-5k-oMk" secondAttribute="centerX" id="cIU-52-bkL"/>
-                            <constraint firstItem="v7C-xI-TUG" firstAttribute="top" secondItem="ZRz-yE-KNL" secondAttribute="bottom" constant="43" id="e14-fW-lYs"/>
-                            <constraint firstItem="8u4-6Y-yrz" firstAttribute="top" secondItem="v7C-xI-TUG" secondAttribute="bottom" constant="66" id="fAG-T4-EMn"/>
-                            <constraint firstItem="ZRz-yE-KNL" firstAttribute="top" secondItem="fvR-bD-hNv" secondAttribute="bottom" constant="396" id="gCQ-Ss-qpB"/>
-                            <constraint firstItem="8jG-c9-FtR" firstAttribute="leading" secondItem="rvh-5k-oMk" secondAttribute="leadingMargin" id="goU-oX-bLw"/>
+                            <constraint firstItem="aXo-KZ-9mF" firstAttribute="top" secondItem="8jG-c9-FtR" secondAttribute="bottom" constant="8" symbolic="YES" id="Fwk-dH-gii"/>
+                            <constraint firstItem="aXo-KZ-9mF" firstAttribute="centerX" secondItem="rvh-5k-oMk" secondAttribute="centerX" id="LxZ-Rq-NJU"/>
+                            <constraint firstItem="aXo-KZ-9mF" firstAttribute="centerX" secondItem="8jG-c9-FtR" secondAttribute="centerX" id="XDm-b7-NHJ"/>
+                            <constraint firstItem="8u4-6Y-yrz" firstAttribute="top" secondItem="aXo-KZ-9mF" secondAttribute="bottom" constant="4" id="ekD-34-4ka"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cameraImageView" destination="8jG-c9-FtR" id="78I-NI-CYO"/>
-                        <outlet property="messageText" destination="ZRz-yE-KNL" id="dIx-EA-04U"/>
-                        <segue destination="bZa-lE-QUe" kind="show" identifier="CameraFin" id="ssR-5s-VxL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXR-Zf-Zsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,15 +382,6 @@ Love message</string>
                                 <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbj-3Q-WsM">
-                                <rect key="frame" x="82" y="366" width="210" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="koc-ph-QDc"/>
-                                    <constraint firstAttribute="height" constant="40" id="o9n-Kr-QRp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8u-cu-N97" customClass="ZFRippleButton" customModule="ZFRippleButton">
                                 <rect key="frame" x="137" y="489" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,7 +390,7 @@ Love message</string>
                                     <constraint firstAttribute="height" constant="100" id="OAt-pZ-nUm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -437,13 +400,22 @@ Love message</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Q4J-f0-4oW" kind="show" id="ljO-DJ-EzV"/>
+                                    <action selector="okButton:" destination="W9L-nE-ke1" eventType="touchUpInside" id="rh8-N0-QjO"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbj-3Q-WsM">
+                                <rect key="frame" x="82" y="314" width="210" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="koc-ph-QDc"/>
+                                    <constraint firstAttribute="height" constant="40" id="o9n-Kr-QRp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gbj-3Q-WsM" firstAttribute="top" secondItem="79O-EG-nvv" secondAttribute="topMargin" constant="366" id="FAj-hK-hz1"/>
+                            <constraint firstItem="gbj-3Q-WsM" firstAttribute="centerY" secondItem="79O-EG-nvv" secondAttribute="centerY" id="GO5-eG-xHQ"/>
                             <constraint firstItem="MID-bY-Iik" firstAttribute="top" secondItem="e7x-qY-py7" secondAttribute="bottom" constant="79" id="Kvi-PX-w8l"/>
                             <constraint firstAttribute="bottomMargin" secondItem="H8u-cu-N97" secondAttribute="bottom" constant="78" id="Pqg-66-FML"/>
                             <constraint firstItem="MID-bY-Iik" firstAttribute="centerX" secondItem="79O-EG-nvv" secondAttribute="centerX" id="cwG-ig-XdP"/>
@@ -454,14 +426,22 @@ Love message</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="messageText" destination="gbj-3Q-WsM" id="T8m-tE-5Ee"/>
+                        <segue destination="zht-cY-Fek" kind="show" identifier="cameraView" id="kMa-pj-FqR"/>
+                        <segue destination="o1E-3c-BEV" kind="show" identifier="shakeView" id="gEQ-dP-93F"/>
+                        <segue destination="mGn-Xj-ps0" kind="show" identifier="callView" id="sn6-bK-3yp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trW-pX-0Fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804.5" y="400.5"/>
+            <point key="canvasLocation" x="1219.5" y="394.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.jpg" width="134" height="133"/>
+        <image name="ngo.jpg" width="512" height="902"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ca2-WI-P1b"/>
+        <segue reference="xaV-Nt-KwK"/>
+        <segue reference="MfV-ly-YqV"/>
     </inferredMetricsTieBreakers>
 </document>

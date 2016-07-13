@@ -7,66 +7,102 @@
 //
 
 import UIKit
+import AVFoundation
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate{
     
     @IBOutlet weak var cameraImageView: UIImageView!
     
-    @IBOutlet weak var messageText: UILabel!
+    var mySession : AVCaptureSession!
+    var myDevice : AVCaptureDevice!
+    var myOutput : AVCaptureVideoDataOutput!
     
-    let userDefaults = NSUserDefaults()
-    
-    var flag = 0
-    
-    
+    var tap : Bool! = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        if flag == 0 {
-            let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
-            // カメラが利用可能かチェック
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-                // インスタンスの作成
-                let cameraPicker = UIImagePickerController()
-                cameraPicker.sourceType = sourceType
-                cameraPicker.delegate = self
-                self.presentViewController(cameraPicker, animated: true, completion: nil)
-                
-            }
-            else{
-                print("ngoi")
-                
-            }
-            flag = 1
+        cameraImageView.transform = CGAffineTransformMakeScale(-1, 1)
+        if initCamera() {
+            mySession.startRunning()
         }
         
     }
     
-    
-    //　撮影が完了時した時に呼ばれる
-    func imagePickerController(imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func initCamera() -> Bool {
+        mySession = AVCaptureSession()
+        mySession.sessionPreset = AVCaptureSessionPresetHigh
+        let devices = AVCaptureDevice.devices()
+        for device in devices {
+            if(device.position == AVCaptureDevicePosition.Front){
+                myDevice = device as! AVCaptureDevice
+            }
+        }
+        if myDevice == nil {
+            return false
+        }
+        let myInput = try! AVCaptureDeviceInput(device: myDevice)
+        if mySession.canAddInput(myInput) {
+            mySession.addInput(myInput)
+        } else {
+            return false
+        }
+        myOutput = AVCaptureVideoDataOutput()
+        myOutput.videoSettings = [ kCVPixelBufferPixelFormatTypeKey: Int(kCVPixelFormatType_32BGRA) ]
+        do {
+            try myDevice.lockForConfiguration()
+            myDevice.activeVideoMinFrameDuration = CMTimeMake(1, 15)
+            myDevice.unlockForConfiguration()
+        } catch {
+            print("lock error")
+        }
+        let queue: dispatch_queue_t = dispatch_queue_create("myqueue",  nil)
+        myOutput.setSampleBufferDelegate(self, queue: queue)
+        myOutput.alwaysDiscardsLateVideoFrames = false
+        if mySession.canAddOutput(myOutput) {
+            mySession.addOutput(myOutput)
+        } else {
+            return false
+        }
+        for connection in myOutput.connections {
+            if let conn = connection as? AVCaptureConnection {
+                if conn.supportsVideoOrientation {
+                    conn.videoOrientation = AVCaptureVideoOrientation.Portrait
+                }
+            }
+        }
         
-//        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            cameraImageView.contentMode = .ScaleAspectFit
-//            cameraImageView.image = pickedImage
-//            messageText.text = userDefaults.objectForKey("Message") as? String
-//            
-//        }
-        
-        //閉じる処理
-        imagePicker.dismissViewControllerAnimated(true, completion: {
-            self.performSegueWithIdentifier("CameraFin", sender: nil)
-        })
-        
+        return true
     }
     
     
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!){
+        dispatch_sync(dispatch_get_main_queue(), {
+           
+            if(!self.tap){
+                self.cameraImageView.image = CameraUtil.imageFromSampleBuffer(sampleBuffer)
+            }
+        })
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "CameraFin"{
+            let finalView:FinalViewController = segue.destinationViewController as! FinalViewController
+            
+            finalView.id = 1
+            finalView.cameraImage = self.cameraImageView
+        }
+    }
+    
+    @IBAction func camra(sender: AnyObject) {
+        if(self.tap==true){
+            self.tap = false
+        }else{
+            self.tap = true
+        }
+        UIImageWriteToSavedPhotosAlbum(self.cameraImageView.image!, self, nil, nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

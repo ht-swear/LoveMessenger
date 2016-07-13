@@ -9,5 +9,6 @@ target 'LoveMessenger' do
   pod 'SCLAlertView'
   pod 'ZFRippleButton'
   pod 'BubbleTransition'
+  pod 'MaterialKit'
 
 end

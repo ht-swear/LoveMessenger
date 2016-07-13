@@ -22,5 +22,15 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let messageView: MessageViewController = segue.destinationViewController as! MessageViewController
+        if segue.identifier == "camera"{
+            messageView.id = 0
+        }else if segue.identifier == "shake"{
+            messageView.id = 1
+        }else if segue.identifier == "call"{
+            messageView.id = 2
+        }
+    }
+   
 }

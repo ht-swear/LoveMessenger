@@ -12,6 +12,7 @@ class MessageViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var messageText: UITextField!
     
+    var id:Int!
     let userDefault = NSUserDefaults()
     
     
@@ -50,5 +51,14 @@ class MessageViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    @IBAction func okButton(sender: AnyObject) {
+        if self.id == 0{
+            self.performSegueWithIdentifier("cameraView", sender: nil)
+        }else if self.id == 1{
+            self.performSegueWithIdentifier("shakeView", sender: nil)
+        }else if self.id == 2{
+            self.performSegueWithIdentifier("callView", sender: nil)
+        }
+    }
     
 }
