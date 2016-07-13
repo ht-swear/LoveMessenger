@@ -20,8 +20,8 @@
 		2D92E3FD1D2E2A9600E31C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D92E3FB1D2E2A9600E31C86 /* LaunchScreen.storyboard */; };
 		2D92E4051D2E33B200E31C86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92E4041D2E33B200E31C86 /* HomeViewController.swift */; };
 		AC4ED38A1D36AEDD002AD378 /* ngo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4ED3891D36AEDD002AD378 /* ngo.jpg */; };
-		AC4ED38C1D36BB04002AD378 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4ED38B1D36BB04002AD378 /* camera.jpg */; };
 		AC4ED38E1D36BB88002AD378 /* CameraUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4ED38D1D36BB88002AD378 /* CameraUtil.swift */; };
+		AC4ED3901D36C7D8002AD378 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4ED38F1D36C7D8002AD378 /* camera.jpg */; };
 		D2BB577C72A600D1D2687B15 /* Pods_LoveMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1C2B42DE98E2A48D617A6 /* Pods_LoveMessenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +43,8 @@
 		2D92E3FE1D2E2A9600E31C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D92E4041D2E33B200E31C86 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC4ED3891D36AEDD002AD378 /* ngo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ngo.jpg; sourceTree = SOURCE_ROOT; };
-		AC4ED38B1D36BB04002AD378 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = camera.jpg; path = ../../camera.jpg; sourceTree = "<group>"; };
 		AC4ED38D1D36BB88002AD378 /* CameraUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUtil.swift; path = "../../mimamori-ios/Mimamori/CameraUtil.swift"; sourceTree = "<group>"; };
+		AC4ED38F1D36C7D8002AD378 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = SOURCE_ROOT; };
 		EEE1C2B42DE98E2A48D617A6 /* Pods_LoveMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				AC4ED3891D36AEDD002AD378 /* ngo.jpg */,
-				AC4ED38B1D36BB04002AD378 /* camera.jpg */,
+				AC4ED38F1D36C7D8002AD378 /* camera.jpg */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				2D92E3FD1D2E2A9600E31C86 /* LaunchScreen.storyboard in Resources */,
 				2D92E3FA1D2E2A9600E31C86 /* Assets.xcassets in Resources */,
 				2D92E3F81D2E2A9600E31C86 /* Main.storyboard in Resources */,
-				AC4ED38C1D36BB04002AD378 /* camera.jpg in Resources */,
+				AC4ED3901D36C7D8002AD378 /* camera.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
