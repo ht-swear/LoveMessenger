@@ -8,21 +8,34 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MaterialKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-LoveMessenger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>SCLAlertView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>ZFRippleButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -38,6 +51,26 @@
 			<true/>
 		</dict>
 		<key>7372CA79CE92E7AC032175441663EBE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73850773DC05DB0F801C716B2A9E95F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A10657452C13E4C32987E452E5123331</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D03DD18AC566F0769FB621EE7D6CBB0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0AA442BE200A0799EF8C745FB3CA577</key>
 		<dict>
 			<key>primary</key>
 			<true/>

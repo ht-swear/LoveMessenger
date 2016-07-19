@@ -5,17 +5,24 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "DD829BDEDA29CC3B4F65F71128EB4C86C245509E" : 0,
-    "9C5309F399828847D2D09038D40192A1A4D742BC" : 0
+    "9C5309F399828847D2D09038D40192A1A4D742BC" : 0,
+    "6329515F1A36309D5980C5404FE1A24D2DF93736" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0CD500B5-21DE-4C67-B949-979E6451EC0C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "DD829BDEDA29CC3B4F65F71128EB4C86C245509E" : "mimamori-ios\/",
-    "9C5309F399828847D2D09038D40192A1A4D742BC" : "lovemessenger\/"
+    "9C5309F399828847D2D09038D40192A1A4D742BC" : "lovemessenger\/",
+    "6329515F1A36309D5980C5404FE1A24D2DF93736" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LoveMessenger",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LoveMessenger.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yeigen\/O-Key",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6329515F1A36309D5980C5404FE1A24D2DF93736"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o-key\/LoveMessenger.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

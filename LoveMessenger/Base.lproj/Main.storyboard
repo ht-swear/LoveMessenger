@@ -90,19 +90,19 @@ LoveMessnger !</string>
                                 <string key="text">Please choose
 favorite Messenger</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgI-sZ-oM8" customClass="ZFRippleButton" customModule="ZFRippleButton">
                                 <rect key="frame" x="81" y="405" width="213" height="58"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="Efo-EX-Inl"/>
                                     <constraint firstAttribute="width" constant="213" id="KUi-u2-Q81"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Shake">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="W9L-nE-ke1" kind="show" identifier="shake" id="b4s-4x-gSD"/>
@@ -110,14 +110,14 @@ favorite Messenger</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmk-kd-1fL" customClass="ZFRippleButton" customModule="ZFRippleButton">
                                 <rect key="frame" x="81" y="282" width="213" height="58"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="3Xs-EU-pg8"/>
                                     <constraint firstAttribute="width" constant="213" id="iaF-Oy-Rr4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Camera">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="W9L-nE-ke1" kind="show" identifier="camera" id="XQi-Vx-hjC"/>
@@ -125,14 +125,14 @@ favorite Messenger</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tod-yv-cbL" customClass="ZFRippleButton" customModule="ZFRippleButton">
                                 <rect key="frame" x="81" y="528" width="213" height="58"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="Vx6-iI-757"/>
                                     <constraint firstAttribute="width" constant="213" id="bRS-kt-Iun"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Call">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.94117647059999998" green="0.50980392159999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="W9L-nE-ke1" kind="show" identifier="call" id="xaV-Nt-KwK"/>
@@ -442,6 +442,6 @@ Love message</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xaV-Nt-KwK"/>
-        <segue reference="MfV-ly-YqV"/>
+        <segue reference="Ca2-WI-P1b"/>
     </inferredMetricsTieBreakers>
 </document>
