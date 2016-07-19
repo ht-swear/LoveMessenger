@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
-class FinalViewController: UIViewController {
+class FinalViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     var cameraImage:UIImageView!
     var id:Int = 0
+    var audioPlayer:AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,9 @@ class FinalViewController: UIViewController {
         if id == 1{
             imageView.image = cameraImage.image
         }
+        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("love", ofType: "mp3")!)
+        self.audioPlayer = try! AVAudioPlayer(contentsOfURL: sound_data)
+        audioPlayer.play()
     }
     
     override func didReceiveMemoryWarning() {
